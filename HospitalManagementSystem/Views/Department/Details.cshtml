@@ -1,0 +1,212 @@
+﻿@using HospitalManagementSystem.Models.Entity
+@*    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860*@
+@model Department
+
+@{
+}
+
+<section id="department-details" class="department-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        @if (Model != null && Model.Id != null)
+        {
+            <div class="row">
+                <!-- Left Column: Department Hero -->
+                <div class="col-xl-6 col-lg-7">
+                    <div class="department-hero" data-aos="fade-right" data-aos-delay="200">
+                        <div class="badge-wrap">
+                            <span class="specialty-badge">@Model.Name</span>
+                        </div>
+                        <h1 class="department-title">Advanced @Model.Name Care</h1>
+                        <p class="department-intro">
+                            @Model.Description
+                        </p>
+
+                        <div class="key-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-number">24/7</span>
+                                <span class="highlight-text">Emergency @Model.Name</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">15+</span>
+                                <span class="highlight-text">Specialist @Model.Name</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">95%</span>
+                                <span class="highlight-text">Patient Satisfaction</span>
+                            </div>
+                        </div>
+
+                        <div class="action-group">
+                            <a href="appointment.html" class="btn-primary">Schedule Consultation</a>
+                            <a href="services.html" class="btn-secondary">
+                                <span>View All Services</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- Fixed: Added missing closing div for col-xl-6 col-lg-7 -->
+                <!-- Right Column: Visuals -->
+                <div class="col-xl-6 col-lg-5">
+                    <div class="department-visual" data-aos="fade-left" data-aos-delay="300">
+                        <div class="image-container">
+                            <img src="assets/img/health/neurology-2.webp" alt="@Model.Name Department" class="img-fluid primary-image">
+                            <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="card-icon">
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>@Model.Name Experts</h4>
+                                    <p>Comprehensive assessment and targeted treatment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Overview Section -->
+            <div class="services-overview" data-aos="fade-up" data-aos-delay="400">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="overview-header">
+                            <h3>Our Specialized @Model.Name Services</h3>
+                            <p>
+                                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                                tincidunt nibh pulvinar a.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gy-4 services-grid">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+                            <h4>Acute Interventions</h4>
+                            <p>Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="550">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h4>Diagnostic Imaging</h4>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <h4>Preventative Screenings</h4>
+                            <p>Donec sollicitudin molestie malesuada. Proin eget tortor risus cras ultricies ligula.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="650">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-person-gear"></i>
+                            </div>
+                            <h4>Chronic Management</h4>
+                            <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-moon"></i>
+                            </div>
+                            <h4>Therapeutic Care</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="750">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h4>Restorative Support</h4>
+                            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a vestibulum ac diam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expert Care Section -->
+            <div class="expert-care-section" data-aos="fade-up" data-aos-delay="800">
+                <div class="row align-items-center">
+                    <div class="col-lg-5" data-aos="fade-right" data-aos-delay="900">
+                        <div class="expert-image">
+                            <img src="assets/img/health/neurology-4.webp" alt="Medical Experts" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-delay="900">
+                        <div class="expert-content">
+                            <h3>Leading @Model.Name Expertise</h3>
+                            <p class="lead">
+                                Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor
+                                lectus nibh donec rutrum congue leo eget malesuada.
+                            </p>
+
+                            <div class="expertise-list">
+                                <div class="expertise-item">
+                                    <i class="bi bi-check2"></i>
+                                    <span>Board-certified medical practitioners and surgeons</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-check2"></i>
+                                    <span>State-of-the-art diagnostic equipment and facilities</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-check2"></i>
+                                    <span>Comprehensive care from diagnosis to rehabilitation</span>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="bi bi-check2"></i>
+                                    <span>Personalized treatment plans for every patient</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="bi bi-telephone"></i>
+                                    <div>
+                                        <span class="contact-label">Emergency Line</span>
+                                        <span class="contact-value">+1 (555) 234-5678</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-calendar-check"></i>
+                                    <div>
+                                        <span class="contact-label">Appointments</span>
+                                        <span class="contact-value">Mon - Fri, 8:00 AM - 6:00 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <!-- Safe fallback if data fails to pass from controller -->
+            <div class="alert alert-warning text-center my-5" role="alert">
+                <h4>Department data could not be loaded.</h4>
+                <p>Please check back later or contact the hospital administration.</p>
+            </div>
+        }
+
+    </div>
+</section>

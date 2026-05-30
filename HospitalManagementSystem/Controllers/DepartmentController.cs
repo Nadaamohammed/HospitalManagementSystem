@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitalManagementSystem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class DepartmentController : Controller
     {
         private readonly HospitalDbContext _context;
@@ -38,6 +38,17 @@ namespace HospitalManagementSystem.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
+
+            return View(department);
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var department = await _context.Departments
+                .FirstOrDefaultAsync(d => d.Id == id);
+
+            if (department == null)
+                return NotFound();
 
             return View(department);
         }
