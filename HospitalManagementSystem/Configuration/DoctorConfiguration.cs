@@ -10,13 +10,13 @@ namespace HospitalManagementSystem.Configuration
         {
             builder.HasKey(d => d.Id);
 
-            builder.Property(d => d.User.FirstName)
-                .IsRequired()
-                .HasMaxLength(100);
+            //builder.Property(d => d.User.FirstName)
+            //    .IsRequired()
+            //    .HasMaxLength(100);
 
-            builder.Property(p => p.User.LastName)
-                .IsRequired()
-                .HasMaxLength(100);
+            //builder.Property(p => p.User.LastName)
+            //    .IsRequired()
+            //    .HasMaxLength(100);
 
             builder.Property(d => d.Specialization)
                 .IsRequired()

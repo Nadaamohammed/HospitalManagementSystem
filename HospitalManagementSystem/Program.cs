@@ -18,6 +18,15 @@ namespace HospitalManagementSystem
 
             builder.Services
                 .AddIdentity<ApplicationUser, IdentityRole>();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequiredLength = 6;
+            })
+.AddEntityFrameworkStores<HospitalDbContext>()
+.AddDefaultTokenProviders();
 
             var app = builder.Build();
 
