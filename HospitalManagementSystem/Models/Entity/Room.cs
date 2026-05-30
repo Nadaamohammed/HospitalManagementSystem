@@ -1,4 +1,6 @@
-﻿namespace HospitalManagementSystem.Models.Entity
+﻿using HospitalManagementSystem.Models.Enum;
+
+namespace HospitalManagementSystem.Models.Entity
 {
     public class Room
     {
@@ -6,7 +8,7 @@
 
         public string RoomNumber { get; set; }
 
-        public string RoomType { get; set; }
+        public RoomType RoomType { get; set; }
 
         public bool IsOccupied { get; set; }
     }

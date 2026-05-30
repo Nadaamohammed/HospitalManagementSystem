@@ -1,3 +1,7 @@
+using HospitalManagementSystem.Models.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace HospitalManagementSystem
 {
     public class Program
@@ -8,6 +12,12 @@ namespace HospitalManagementSystem
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<HospitalDbContext>(options =>
+  options.UseSqlServer(
+      builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services
+                .AddIdentity<ApplicationUser, IdentityRole>();
 
             var app = builder.Build();
 
@@ -18,6 +28,9 @@ namespace HospitalManagementSystem
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+          
+
+            builder.Services.AddControllersWithViews();
 
             app.UseHttpsRedirection();
             app.UseRouting();

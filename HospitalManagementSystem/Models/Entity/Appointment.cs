@@ -1,4 +1,6 @@
-﻿namespace HospitalManagementSystem.Models.Entity
+﻿using HospitalManagementSystem.Models.Enum;
+
+namespace HospitalManagementSystem.Models.Entity
 {
     public class Appointment
     {
@@ -14,7 +16,7 @@
 
         public DateTime AppointmentDate { get; set; }
 
-        public string Status { get; set; }
+        public AppointmentStatus Status { get; set; }
 
         public string Notes { get; set; }
     }

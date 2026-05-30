@@ -1,0 +1,10 @@
+﻿namespace HospitalManagementSystem.Models.Enum
+{
+    public enum AppointmentStatus
+    {
+        Pending,
+        Confirmed,
+        Completed,
+        Cancelled
+    }
+}
