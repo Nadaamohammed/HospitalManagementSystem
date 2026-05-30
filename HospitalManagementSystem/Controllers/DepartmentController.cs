@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 namespace HospitalManagementSystem.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class DepartmentControllers : Controller
+    public class DepartmentController : Controller
     {
         private readonly HospitalDbContext _context;
 
-        public DepartmentControllers(HospitalDbContext context)
+        public DepartmentController(HospitalDbContext context)
         {
             _context = context;
         }
