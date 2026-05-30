@@ -17,7 +17,7 @@ namespace HospitalManagementSystem.Controllers
         // GET: DepartmentControllers
         public async Task<IActionResult> Index()
         {
-            var departments = await _context.Departments.ToListAsync();
+            var departments = await _context.Departments.ToListAsync(); // <- error here
             return View(departments);
         }
 
